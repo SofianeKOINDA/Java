@@ -1,5 +1,3 @@
-//ce fichier est inspiré de la vidéo de la chaine youtube "CodeWithChris" : https://www.youtube.com/watch?v=3f5Q9wDePzY
-
 // Affichage de la photo
 document.getElementById('profilePic').addEventListener('change', function(e) {
     const file = e.target.files[0];
