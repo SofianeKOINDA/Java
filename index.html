@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon CV.SN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>MON CV.SN</h2>
+            <div class="sections-menu">
+                <button class="section-btn active" data-section="personal">Informations Personnelles</button>
+                <button class="section-btn" data-section="experience">Expérience</button>
+                <button class="section-btn" data-section="education">Formation</button>
+                <button class="section-btn" data-section="skills">Compétences</button>
+                <button class="section-btn" data-section="languages">Langues</button>
+                <button class="section-btn" data-section="hobbies">Hobbies</button>
+            </div>
+            <button id="generateCV" class="generate-btn">Exporter CV</button>
+        </div>
+
+        <div class="main-content">
+            <div id="personal" class="section active">
+                <h3>Informations Personnelles</h3>
+                <div class="photo-upload">
+                    <input type="file" id="profilePic" accept="image/*">
+                    <label for="profilePic">Choisir une photo</label>
+                </div>
+                <input type="text" id="fullName" placeholder="Nom complet">
+                <input type="text" id="title" placeholder="Titre professionnel">
+                <input type="email" id="email" placeholder="Email">
+                <input type="tel" id="phone" placeholder="Téléphone">
+                <textarea id="about" placeholder="À propos de moi"></textarea>
+            </div>
+
+            <div id="experience" class="section">
+                <h3>Expérience Professionnelle</h3>
+                <div id="experienceList"></div>
+                <button class="add-btn" id="addExperience">+ Ajouter une expérience</button>
+            </div>
+
+            <div id="education" class="section">
+                <h3>Formation</h3>
+                <div id="educationList"></div>
+                <button class="add-btn" id="addEducation">+ Ajouter une formation</button>
+            </div>
+
+            <div id="skills" class="section">
+                <h3>Compétences</h3>
+                <div id="skillsList"></div>
+                <button class="add-btn" id="addSkill">+ Ajouter une compétence</button>
+            </div>
+
+            <div id="languages" class="section">
+                <h3>Langues</h3>
+                <div id="languagesList"></div>
+                <button class="add-btn" id="addLanguage">+ Ajouter une langue</button>
+            </div>
+
+            <div id="hobbies" class="section">
+                <h3>Passion</h3>
+                <div id="hobbiesList"></div>
+                <button class="add-btn" id="addHobby">+ Ajouter une passion</button>
+            </div>
+        </div>
+
+        <div class="preview-panel">
+            <div class="cv-preview">
+                <div class="cv-header">
+                    <img id="preview-photo" src="" alt="Photo de profil" style="display: none;">
+                    <h1 id="preview-name">Votre Nom</h1>
+                    <p id="preview-title">Votre Titre</p>
+                    <p id="preview-contact"></p>
+                    <p id="preview-about"></p>
+                </div>
+                
+                <div class="cv-section">
+                    <h2>Expérience Professionnelle</h2>
+                    <div id="preview-experience"></div>
+                </div>
+
+                <div class="cv-section">
+                    <h2>Formation</h2>
+                    <div id="preview-education"></div>
+                </div>
+
+                <div class="cv-section">
+                    <h2>Compétences</h2>
+                    <div id="preview-skills"></div>
+                </div>
+
+                <div class="cv-section">
+                    <h2>Langues</h2>
+                    <div id="preview-languages"></div>
+                </div>
+
+                <div class="cv-section">
+                    <h2>Passion</h2>
+                    <div id="preview-hobbies"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
